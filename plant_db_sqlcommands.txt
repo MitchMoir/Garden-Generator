@@ -1,0 +1,154 @@
+--create database
+CREATE DATABASE plants_db;
+
+--create the annual table
+USE plants_db;
+CREATE TABLE annuals (
+    tag_id INT PRIMARY KEY AUTO_INCREMENT,
+    plant_name VARCHAR(50) NOT NULL,
+    scientific_name VARCHAR(50) DEFAULT NULL,
+    series_and_color VARCHAR(100) UNIQUE,
+    sun CHAR(1),
+    habit VARCHAR(15),
+    planter_use VARCHAR(10),
+    container_type INT DEFAULT "1",
+    min_space INT,
+    max_space INT,
+    min_height INT,
+    max_height INT
+);
+--failed first entry
+INSERT INTO annuals VALUES ("gomphrena", "Ping Pong Purple", "T", null, "thriller", 8, 10, 16, 20);
+--corrected first entry
+INSERT INTO annuals VALUES (1, "gomphrena", NULL, "Ping Pong Purple", "T", NULL, "thriller", DEFAULT, 8, 10, 16, 20);
+
+--?
+SELECT * FROM annuals;
+
+--clean up?
+DELETE FROM annuals WHERE tag_id = NULL;
+
+
+INSERT INTO annuals values (2, "thunbergia", "Thunbergia alata", "Susie Mix", "T", "climbing", NULL, DEFAULT, NULL, 24, NULL, 60);
+(3, "fuchsia", NULL, "Aretes Patio Princess", "F", NULL, "filler", default, 8, 12, 18, 24)
+(4, "lobelia", NULL, "Magadi Electric Purple", "F", NULL, "spiller", default, 10, null, 8, 12)
+(5, "ivy geranium", "Pelargonium peltatum", "Precision Pink", "T", NULL, "thriller", 1, 14, 20, 10, 12);
+
+INSERT INTO annuals VALUES
+	(6, "coleus", "Solenostemon scutellarioides", "Stained Glassworks Burgandy Wedding Train", "f", "spreading", "spiller", 1, 10, 16, 18, 24),
+    (7, "millet", null, "Jade Princess", "t", null, "thriller", 1, 10, 16, 36, 48),
+    (8, "scaevola", "Scaevola hybrid", "Whirlwind Blue", "t", "trailing", "spiller", 1, 10, 12, 8, 14),
+    (9, "bacopa", "Sutera cordata", "Snowstrorm Glacier Blue", "f", "trailing", "spiller", 1, 8, 12, 4, 10), 
+    (10, "tuberous begonia", null, "Nonstop Mocca Bright Orange", "f", null, "filler", 1, 12, null, null, 8);
+
+
+INSERT INTO annuals VALUES
+	(11, "bacopa", "Sutera cordata", "Snowstorm Snow Globe", "f", "trailing", "spiller", 1, 8, 12, 4, 10),
+    (12, "calendula", "Calendula hybrid", "Lady Godiva Orange", "t", "mounding", "filler", 1, 8, 12, 10, 16),
+    (13, "lobelia", "Lobelia erinus", "Laguna Sky Blue", "f", "mounding", "filler", 1, 12, 18, 6, 12),
+    (14, "cyperus", "Cyperus alternifolius", "Cleopatra", "t", "clumping", "thriller", 1, 8, 16, 12, 18),
+    (15, "craspedia", "Craspedia globosa", "Golf Beauty", "t", "upright", "thriller", 1, null, null, 8, 12),
+    (16, "ivy (hedera)", "Hedera helix", "Gold Child", "t", "climbing", "spiller", 1, 8, 12, null, 600), 
+    (17, "hypoestes", "Hypoestes phyllostachya", "Proven Accents Hippo Rose", "f", "upright", "thriller", 1, 6, 10, 16, 22),
+    (18, "bacopa", "Sutera cordata", "Snowstorm Blue", "f",  "trailing", "spiller", 1, 8, 12, 4, 10),
+    (19, "calibrachoa", "Calibrachoa hybrid", "Superbells Coralina", "t", "trailing", "spiller", 1, 8, 12, 6, 12),
+    (20, "angelonia", "Angelonia hybrid", "Angelface Super White", "t", "upright", "thriller", 1, 10, 14, 30, 40);
+
+INSERT INTO annuals VALUES
+	(21, "hyacinth bean", null, "Hyacinth Bean", "t", "climbing", "spiller", 1, null, 14, 10, 20), 
+    (22, "mexican flame vine", "Senecio confusus", "Mexican Flame Vine", "t", "climbing", "spiller", 1, null, null, 48, 60), 
+    (23, "pseuderanthemum", null, "Stainless Steel", "t", "upright", "thriller", 1, 12, 18, 24, 36),
+    (24, "abutilon", "Abultion hybrid", "Lucky Lantern Yellow", "t", "upright", "thriller", 1, null, 12, null, 12),
+    (25, "verbena", "Verbena hybrid", "Superbena Whiteout", "t", "trailing", "spiller", 1, 10, 14, 6, 12),
+    (26, "impatiens", null, "Bounce Pink Flame", "f", null, "filler", 1, null, 18, 14, 20),
+    (27, "ivy geranium", "Pelargonium x peltatum", "Ivy League Red", "t", null, "filler", 1, 20, 24, 12, 16),
+    (28, "vinca", "Vinca major", "Wojo's Jem", "t", "trailing", "spiller", 1, null, 18, null, 6),
+    (29, "sweet potato vine", "Ipomoea batatas", "Proven Accents Illusion Midnight Lace", "t", "trailing", "spiller", 1, 10, 12, 6, 10),
+    (30, "dahlia", null, "Dahlinova Lisa Dark Pink", "t", null, "filler", 1, null, 12, null, 10);
+
+INSERT INTO annuals VALUES
+	(31, "sunpatiens", "Impatiens x hybrida", "Compact Orchid PPAF", "f", null, "filler", 1, 14, 20, 16, 30),
+    (32, "gerber daisy", null, "Gerbera daisy", "t", null, "filler", 1, 12, 15, 6, 18),
+    (33, "trailing ivy geranium", null, "Cascade Bright", "t", null, "spiller", 1, 20, 24, 12, 14),
+    (34, "petunia", "Petunia hybrid", "Supertunia Giant Pink", "t", "mounding", "filler", 1, 12, 24, 6, 12),
+    (35, "sunpatiens", null, "Compact Electric Orange", "f", null, "filler", 1, 12, 18, 12, 24),
+    (36, "angelonia", "Angelonia hybrid", "Angelface Perfectly Pink", "t", "upright", "thriller", 1, 10, 14, 18, 30), 
+    (37, "umbrella grass", "Cyperus involucratus", "Graceful Grasses Baby Tut", "t", "mounding", "filler", 1, 14, 20, 18, 24),
+    (38, "angelonia", "Angelonia x hybrida", "Archangel Pink", "t", null, "filler", 1, 10, 12, 12, 14),
+    (39, "salvia", "Salvia farinacea", "Cathedral Deep Blue", "t", null, "filler", 1, null, 18, 12, 16),
+    (40, "petunia", "Petunia x hybrida", "Vogue Red", "t", "mounding", "filler", 1, 12, 18, 8, 10),
+    (41, "new guinea impatiens", null, "Super Sonic White", "f", null, "filler", 1, 14, 16, 14, 16),
+    (42, "geranium", null, "Calliope Large Pink", "t", "mounding", "filler", 1, 22, 26, 14, 16),
+    (43, "helichrysum", "Helichrysum petiolare", "Limelight", "t", "mounding", "filler", 1, 15, 18, 12, 18),
+    (44, "rieger begonia", "Begonia x hiemalis", "Dragone Champagne", "f", "mounding", "filler", 1, null, 12, 6, 12),
+    (45, "fuchsia", "Fuchsia hybrid", "Aretes Upright Jollies Reims", "f", "upright", "thriller", 1, 12, 15, 12, 18),
+    (46, "verbena", "Verbena hybrid", "Superbena Peachy Keen", "t", "trailing", "spiller", 1, 8, 12, 6, 12),
+    (47, "calibrachoa", null, "Hula Hot Pink", "t", null, "spiller", 1, 12, 14, 8, 12),
+    (48, "angelonia", "Angelonia hybrid", "Angelface Blue", "t", "upright", "thriller", 1, 10, 14, 18, 30),
+    (49, "begonia", "Begonia elatior", "Vermillion Red", "f", null, "filler", 1, 12, 15, 8, 12),
+    (50, "verbena", "Verbena peruviana", "Cadet Upright White", "t", null, "filler", 1, 8, 10, 8, 10);
+
+INSERT INTO annuals VALUES
+	(51, "petunia", "Petunia hybrid", "Supertunia Vista Jazzberry", "t", "mounding", "filler", 1, 18, 32, 12, 24),
+    (52, "dahlia", "Dahlia hybrid", "Dalina Grande Cancun", "t", "upright", "filler", 1, 12, 15, 15, 18),
+    (53, "sweet potato vine", "Ipomoea hybrid", "Proven Accents Sweet Caroline Red Hawk", "t", "trailing", "spiller", 1, 12, 18, 6, 16),
+    (54, "sunpatiens", null, "Compact Purple", "f", null, "filler", 1, 12, 18, 12, 24),
+    (55, "gaura", "Gaura lindheimeri", "Belleza Dark Pink", "t", null, "thriller", 1, 16, 20, 12, 18),
+    (56, "verbena", "Verbena hybrid", "Superbena Peachy Kenn", "t", "trailing", "spiller", 1, 8, 12, 6, 12),
+    (57, "sunpatiens", null, "Vigorous Tropical Salmon", "f", null, "thriller", 1, 14, 20, 16, 30),
+    (58, "torenia", "Torenia", "Catalina White Linen", "f", "mounding", "filler", 1, 8, 10, 8, 16), 
+    (59, "fuchsia", "Fuchsia hybrid", "Autumnale", "f", "trailing", "spiller", 1, 12, 24, 6, 12),
+    (60, "portulaca", "Porulaca oleracea", "RioGrande Yellow", "t", "trailing", "spiller", 1, null, 12, 3, 4),
+    (61, "dracena spikes", "Cordyline indivisa", "Spikes", "t", "upright", "thriller", 1, 10, 24, 18, 36),
+    (62, "calibrachoa", "Calibrachoa hybrid", "Superbells Evening Star", "t", "trailing", "spiller", 1, 8, 12, 6, 12),
+    (63, "verbena", "Verbena canadensis", "Homestead Purple", "t", null, "filler", 1, 15, 24, 12, 18),
+    (64, "lantana", "Lantana camara", "Bandolero Pink", "t", "mounding", "filler", 1, 24, 36, 18, 24),
+    (65, "verbena", "Verbena rigida", "Cake Pops Pink", "t", "mounding", "filler", 1, 8, 12, 10, 18),
+    (66, "dragon wing begonia", null, "Dragon Wing Pink", "f", null, "filler", 1, null, 24, 12, 15),
+    (67, "angelonia", "Angelonia x hybrida", "Archangel White", "t", null, "filler", 1, 10, 12, 10, 12),
+    (68, "begonia", null, "Solenia Yellow", "f", null, "filler", 1, null, null, 8, 12),
+    (69, "calibrachoa", "Calibrachoa hybrid", "Superbells Holy Moly!", "t", "trailing", "spiller", 1, 8, 12, 6, 12),
+    (70, "lysimachia", null, "Goldi", "f", "trailing", "spiller", 1, 12, 16, 4, 6);
+
+--disabled mysql safe mode to execute the following update of changing 't' and 'f' to 'y' and 'n', thinking a user will feel more
+comfortable answering yes or no rather than true or false
+UPDATE annuals SET sun = 'y' WHERE sun = 't';
+
+UPDATE annuals SET sun = 'n' WHERE sun = 'f';
+
+--after entering in all the data so far, I found myself wanting to enter in height data before width data, so I adjusted the table
+before inserting any more values. Updates to the program will begin to use the data in these columns.
+ALTER TABLE annuals MODIFY COLUMN min_space INT AFTER max_height;
+
+ALTER TABLE annuals MODIFY COLUMN max_space INT AFTER min_space;
+
+--the next data insertion update will include plants sold in groups of six.
+--as the next update to the program will use 6 packs, there is no good reason to give precedent to the singles.
+ALTER TABLE annuals ALTER container_type DROP DEFAULT;
+
+ALTER TABLE annuals RENAME COLUMN container_type TO sold_as;
+
+--first insertion for the bedding plants
+INSERT INTO annuals (plant_name, scientific_name, series_and_color, sun, habit, sold_as, min_height, max_height, min_space, max_space) 
+VALUES
+('vinca', 'Catharanthus roseus', 'Cora XDR Cranberry', 'y', 'mounded', 6, 14, 16, 18, null),
+('vinca', null, 'Pacifica Lipstick Mix', 'y', null, 6, 10, 14, 8, 12),
+('zinnia', null, 'State Fair Mix', 'y', null, 6, 30, 36, 18, null),
+('gazania', 'Gazania rigens', 'New Day Yellow', 'y', 'branching', 6, 8, 10, 10, null),
+('salvia', 'Salvia coccinea', 'Summer Jewel Red', 'y', 'compact', 6, 18, 20, 10, 12),
+('vinca', 'Catharanthus roseus', 'Tattoo Black Cherry', 'y', null, 6, 10, 14, 6, null),
+('French marigold', 'Tagetes patula', 'Durango Yellow', 'y', 'upright', 6, 8, 15, 12, 15),
+('zinnia', 'Zinnia hybrid', 'Profusion Cherry Bicolor', 'y', 'compact', 6, 12, 18, 15, 18),
+('zinnia', null, 'Cut & Come Again Mix', 'y', null, 6, null, 24, 18, null),
+('celosia', null, 'New Look', 'y', null, 6, 12, 16, 12, null);
+
+--test to see how the bedding plants look in database
+SELECT * FROM annuals WHERE sold_as = 6;
+
+INSERT INTO annuals (plant_name, scientific_name, series_and_color, sun, habit, sold_as, min_height, max_height, min_space, max_space) VALUES
+('impatiens', 'Impatiens walleriana', 'Imara Rose', 'n', 'compact', 6, 6, 8, 6, 8),
+('coleus', 'Solenostemon scutellarioides', 'Wizard Select Mix', 'n', 'upright', 6, 12, 16, 10, 14),
+('dwarf snapdragon', 'Antirrhinum majus', 'Snapshot Pink', 'y', 'mounded', 6, 6, 10, 10, 12),
+('impatiens', 'Impatiens walleriana', 'Imara XDR White', 'n', 'compact', 6, 6, 8, 6, 8),
+('zinnia', null, 'Dreamland Mix', 'y', null, 6, 8, 10, 8, null),
+('begonia', 'Begonia semperflorens', 'Bada Boom White', 'n', 'spreading', 6, 6, 12, 12, null);
