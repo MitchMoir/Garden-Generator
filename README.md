@@ -1,4 +1,4 @@
-# Garden-Generator
+# Planter-Generator
 
 Working at a garden center, I took notice the massive quantity of plants brought in to sell each season. Each plant came with a tag that contained data about the plant. With all this unique data available to me, I thought it would be a fun experiment to create a database of plants, giving me an opportunity to play around and gain some SQL experience.
 
