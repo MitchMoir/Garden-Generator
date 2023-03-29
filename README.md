@@ -19,6 +19,6 @@ For my own personal gain, this project helped me gain a better understanding of 
 
 Going forward, I have several plans for extending this program. One is creating a feature that generates flower beds in addition to planters. This will require more math and creativity in the Python script than what was needed for the planter generator. Another is to give the program a GUI, with options for more queries to take advantage of the data in the database.
 
-Trying to break into the tech field from a non traditional background, I wanted to come up with a project idea that was more unique to my experience, and at the same time to provide an example of how to implement technology in a new way for my current job. The extensibility of the program will keep me learning, engaged, and having fun for some time.
+Trying to break into the tech field from a non traditional background, I wanted to come up with a project idea that was unique to my experience, and at the same time to provide an example of how to implement technology in a new way for my current job. The extensibility of the program will keep me learning, engaged, and having fun for some time.
 
 Thanks for reading.
